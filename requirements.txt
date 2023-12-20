@@ -1,0 +1,25 @@
+fastapi==0.95.1
+httpx==0.24.1
+starlette==0.26.1
+ujson
+requests==2.22.0
+python-multipart
+uvicorn
+gunicorn
+uvloop
+numpy==1.23.5
+opencv-python~=4.7.0.72
+pillow==10.0.0
+PyMuPDF==1.22.3
+pytest==7.3.1
+pandas
+lightgbm==3.3.5
+networkx==2.5.1
+tqdm
+shapely
+python-dotenv==1.0.0
+igraph==0.10.5
+# --- AWS Dependencies ---
+boto3==1.28.17
+aioboto3~=11.3.0
+botocore~=1.31.17

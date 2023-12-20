@@ -1,0 +1,112 @@
+# Default ignored files
+#.gitignore
+
+# Specific ingnored files
+
+# Default ignored directories
+/.idea
+/__pycache__
+__pycache__
+
+# Specific ingnored directories
+/temp_dump_dir
+/temp_jupyter
+
+# Git
+.git
+.gitignore
+
+# Docker
+temp_dump_dir/docker-compose.yml
+.docker
+
+# Virtual environment
+
+.venv/
+venv/
+
+# CI
+.codeclimate.yml
+.travis.yml
+.taskcluster.yml
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*/*.py[cod]
+*/*/*.py[cod]
+*/*/*/*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+
+
+# PyCharm
+.idea
+
+# Python mode for VIM
+.ropeproject
+*/.ropeproject
+*/*/.ropeproject
+*/*/*/.ropeproject
+
+# Vim swap files
+*.swp
+*/*.swp
+*/*/*.swp
+
+/cython_lib/dashed_objects_cython_p8.c
+/cython_lib/dashed_objects_cython_p4.c
+/cython_lib/points_intersect_cython.c

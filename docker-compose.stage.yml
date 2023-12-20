@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  heuristics_based_detection_service:
+    image: 064427434392.dkr.ecr.us-east-1.amazonaws.com/heuristics_based_detection_service:latest
+    container_name: heuristics_based_detection_service
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '${STAGE_SYSTEM_PATH_TO_MODEL}:${STAGE_DOCKER_PATH_TO_MODEL}'
+    environment:
+      - ENVIRONMENT=STAGE
+    env_file:
+      - .env
+      - src_env/stage/.env
+    ports:
+      - '${STAGE_SYSTEM_APP_PORT}:${STAGE_APP_PORT}/tcp'
+    expose:
+      - '${STAGE_APP_PORT}/tcp'
+    command: gunicorn main:app --worker-tmp-dir /dev/shm -b ${STAGE_APP_HOST}:${STAGE_APP_PORT} -w ${STAGE_APP_WORKERS} -t ${STAGE_APP_TIMEOUT} --graceful-timeout ${STAGE_APP_GRACEFUL_TIMEOUT} -k uvicorn.workers.UvicornWorker
